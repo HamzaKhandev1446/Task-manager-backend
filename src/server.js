@@ -1,10 +1,13 @@
 const http = require("http");
 const app = require("./app");
-const dotenv = require("dotenv");
-
-dotenv.config();
+const connectDB = require("./config/db");
+// Load environment variables from .env file
+require('dotenv').config();
 
 const port = process.env.PORT || 3000;
+
+connectDB();
+
 const server = http.createServer(app);
 
 server.listen(port, () => {
