@@ -5,11 +5,17 @@ const connectDB = require("./config/db");
 require('dotenv').config();
 
 const port = process.env.PORT || 3000;
-
-connectDB();
-
 const server = http.createServer(app);
 
-server.listen(port, () => {
-  console.log(`Server is up on port ${port}`);
-});
+const start = async () => {
+  try {
+    await connectDB();
+    server.listen(port, () => {
+      console.log(`Server is up on port ${port}`);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+} 
+
+start();
