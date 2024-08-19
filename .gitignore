@@ -1,2 +1,37 @@
-# Ignore node_modules directory
+# Node.js dependencies
 node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.pid.lock
+
+# Coverage directory used by testing frameworks like jest
+coverage/
+
+# npm debug file
+npm-debug.log*
+
+# Output of 'npm pack'
+*.tgz
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# IDE/Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+
+# System files
+Thumbs.db
